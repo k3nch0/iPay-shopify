@@ -21,15 +21,10 @@ class Ipay {
             validate_items: true,
             shop_order_id: this.options.shop_order_id,
             locale: this.options.locale,
-            purchase_units: [{
-                amount: {
-                    currency_code: this.options.currency_code,
-                    value: totalAmount
-                },
-                industry_type: this.options.industry_type
-            }],
-            items
+            cart_items: [{items}],
+
         }
+        console.log(checkoutDetails)
         let token = await this.token;
         const result = await api.checkout(this.options, token.access_token, checkoutDetails);
         if(result.error_message == "Requested token expired/invalid"){

@@ -1,6 +1,6 @@
 {
   "name": "ipay-shopify",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Shopify middleware for ipay",
   "main": "index.js",
   "scripts": {
