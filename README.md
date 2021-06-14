@@ -3,13 +3,13 @@
 ## Installation
 
 ```bash
-npm i @bank-of-georgia/ipay-sdk
+npm i @k3nch0/ipay-shopify
 ```
 
 ## Usage
 
 ```js
-const SDK = require('@bank-of-georgia/ipay-sdk');
+const SDK = require('@k3nch0/ipay-shopify');
 ```
 
 
