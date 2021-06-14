@@ -14,7 +14,7 @@ class Ipay {
         const checkoutDetails = {
             intent: this.options.intent,
             installment_month: 6,
-            installment_type: 'standard',
+            installment_type: 'STANDARD',
             success_redirect_url: "https://demo.ipay.ge/success",
             fail_redirect_url: "https://demo.ipay.ge/fail",
             reject_redirect_url: "https://demo.ipay.ge/reject",
@@ -37,6 +37,7 @@ class Ipay {
             this.token = api.generateToken(this.options);
             token = await this.token;
         }
+        return token.access_token;
         return api.checkout(this.options, token.access_token, checkoutDetails);
     }
 
