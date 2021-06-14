@@ -27,7 +27,7 @@ const apiCall = async (host, path, headers, content, method) => {
 };
 
 const generateToken = (options) => {
-    const path = '/opay/api/v1/oauth2/token/';
+    const path = '/v1/oauth2/token';
     const queryParams = { grant_type: "client_credentials" };
     const content = Object.keys(queryParams).map(key => `${key}=${queryParams[key]}`).join('&');
     const usernameAndPassword = `${options.username}:${options.password}`;
@@ -39,7 +39,7 @@ const generateToken = (options) => {
 };
 
 const checkout = (options, token, checkoutDetails) => {
-    const path = '/opay/api/v1/checkout/orders/';
+    const path = '/v1/installment/checkout';
     const content = JSON.stringify(checkoutDetails);
     const headers = {
         'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ const checkout = (options, token, checkoutDetails) => {
 };
 
 const getOrders = (options, token, order) => {
-    const path = `/opay/api/v1/checkout/orders/${order}`;
+    const path = `/v1/installment/checkout/${order}`;
     const headers = {
         'Content-Type': 'application/json',
         'Authorization': `Basic ${token}`
