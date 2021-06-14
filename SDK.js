@@ -28,7 +28,7 @@ class Ipay {
                 },
                 industry_type: this.options.industry_type
             }],
-            cart_items: [{items}]
+            cart_items: items
         }
         let token = await this.token;
         const result = await api.checkout(this.options, token.access_token, checkoutDetails);
