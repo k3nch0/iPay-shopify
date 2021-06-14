@@ -13,9 +13,13 @@ class Ipay {
         let totalAmount = items.reduce((total, currentValue) => total + currentValue.amount * currentValue.quantity, 0);
         const checkoutDetails = {
             intent: this.options.intent,
-            redirect_url: this.options.redirect_url,
+            installment_month: 6,
+            installment_type: 'standard',
+            success_redirect_url: "https://demo.ipay.ge/success",
+            fail_redirect_url: "https://demo.ipay.ge/fail",
+            reject_redirect_url: "https://demo.ipay.ge/reject",
+            validate_items: true,
             shop_order_id: this.options.shop_order_id,
-            card_transaction_id: this.options.card_transaction_id,
             locale: this.options.locale,
             purchase_units: [{
                 amount: {
