@@ -23,10 +23,9 @@ class Ipay {
             locale: this.options.locale,
             purchase_units: [{
                 amount: {
-                    currency_code: this.options.currency_code,
-                    value: totalAmount
-                },
-                industry_type: this.options.industry_type
+                    currency: "GEL",
+                    value: "100.50"
+                }
             }],
             cart_items: items
         }
