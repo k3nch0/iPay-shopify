@@ -1,0 +1,19 @@
+{
+  "name": "ipay-shopify",
+  "version": "0.0.1",
+  "description": "Shopify middleware for ipay",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k3nch0/iPay-shopify.git"
+  },
+  "author": "0to",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k3nch0/iPay-shopify/issues"
+  },
+  "homepage": "https://github.com/k3nch0/iPay-shopify#readme"
+}
