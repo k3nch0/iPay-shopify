@@ -29,14 +29,14 @@ class Ipay {
             }],
             cart_items: items
         }
-        return checkoutDetails;
+
         let token = await this.token;
         const result = await api.checkout(this.options, token.access_token, checkoutDetails);
         if(result.error_message == "Requested token expired/invalid"){
             this.token = api.generateToken(this.options);
             token = await this.token;
         }
-        return token.access_token;
+
         return api.checkout(this.options, token.access_token, checkoutDetails);
     }
 
